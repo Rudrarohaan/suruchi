@@ -16,20 +16,6 @@ body {
   z-index: -1;
   animation: untoldcoding 55s infinite ease-in-out;
 }
-.textCont {
-  font-size: 150%;
-
-  margin-top: 10%;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 60%;
-  height: 80%;
-}
-
-div.textCont::after {
-  content: "|";
-  animation: blinky 1s linear infinite;
-}
 
 @keyframes untoldcoding {
   0% {
