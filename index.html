@@ -8,10 +8,38 @@
   </head>
   <body>
     <div class="bg_heart"></div>
-
+   <div class="textCont"></div>
+    <div class="song">
+      <div class="title">Tap to Play Sound</div>
+      <div class="pause" onclick="togglePlay()">🔇</div>
+      <div class="player">
+        <audio
+          class="audio"
+          src="song.mp3"
+          autoplay
+          type="audio"
+          loop=""
+        ></audio>
+      </div>
+    </div>
     <div class="container">
       <h2 id="text1"></h2>
     </div>
     <script src="rudra.js"></script>
+    <script>
+      var pause = document.querySelector(".pause");
+      var audio = document.querySelector(".audio");
+
+      function togglePlay() {
+        if (audio.paused) {
+          audio.play();
+          pause.innerHTML = "🔇";
+        } else {
+          audio.pause();
+          pause.innerHTML = "🔊";
+          pause.style.color = " #848484";
+        }
+      }
+    </script>
   </body>
 </html>
