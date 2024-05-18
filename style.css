@@ -1,44 +1,76 @@
-html,
-body {
-  margin: 0px;
-  height: 100%;
-}
-.bg_heart {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-image: url("https://i.postimg.cc/1XcLrz2X/pexels-stanley-morales-1487076.jpg");
-  background-size: 100vh 100vh;
-  background-size: cover;
-  z-index: -1;
-  animation: untoldcoding 55s infinite ease-in-out;
+m:root {
+  --theme-color: #285685;
+  --font-color: #ffc765;
+  --shade1: rgba(242, 38, 19, 0.5);
+  --shade2: rgba(0, 255, 255, 0.5);
 }
 
-@keyframes untoldcoding {
+body {
+  background-color: black;
+  font-family: Chaucer;
+  color: var(--font-color);
+
+  display: flex;
+  justify-content: center;
+}
+
+.textCont {
+  font-size: 150%;
+
+  margin-top: 10%;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 60%;
+  height: 80%;
+}
+
+div.textCont::after {
+  content: "|";
+  animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
   0% {
-    background-image: url("https://i.postimg.cc/1XcLrz2X/pexels-stanley-morales-1487076.jpg");
+    opacity: 0;
   }
-  25% {
-    background-image: url("https://i.postimg.cc/vBHgsPwZ/sunset-698501-1280.jpg");
+  49.9% {
+    opacity: 0;
   }
   50% {
-    background-image: url(" https://i.postimg.cc/9Fq4CRKZ/candles-1645551-1280.jpg");
+    opacity: 1;
   }
-  80% {
-    background-image: url("https://i.postimg.cc/w3Kj72ZJ/rose-3407234-1280.jpg");
+  99.9% {
+    opacity: 1;
   }
 }
 
-.container {
+footer {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+}
+
+footer > a {
+  background-color: transparent;
+  color: var(--font-color);
+  font-weight: bold;
+  font-family: "Megrim";
+  font-size: 110%;
+  text-decoration: none;
+  padding: 5px 20px;
+
+  border: 3px solid var(--font-color);
+  transition: color 0.5s linear, box-shadow 0.5s ease-in;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  right: 5%;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-family: cursive;
+}
+.pause {
+  cursor: pointer;
 }
