@@ -52,12 +52,3 @@ body {
 .pause {
   cursor: pointer;
 }
-.textCont {
-  font-size: 150%;
-
-  margin-top: 10%;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 60%;
-  height: 80%;
-}
