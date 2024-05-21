@@ -8,7 +8,7 @@
     <!--<link rel="stylesheet" href="style1.css" /> -->
   </head>
   <body>
-    <div class="textCont"></div>
+    <!--<div class="textCont"></div>
     <div class="song">
       <div class="title">Tap to Play Sound</div>
       <div class="pause" onclick="togglePlay()">🔇</div>
@@ -20,14 +20,21 @@
           type="audio"
           loop=""
         ></audio>
-      </div>
+      </div> -->
+    <audio
+          class="audio"
+          src="song.mp3"
+          autoplay
+          type="audio"
+          loop=""
+        ></audio>
     <div class="bg_heart"></div>
 
     <div class="container">
       <h2 id="text1"></h2>
     </div>
     <script src="rudra.js"></script>
-    <script>
+   <!-- <script>
       var pause = document.querySelector(".pause");
       var audio = document.querySelector(".audio");
 
@@ -41,6 +48,6 @@
           pause.style.color = " #848484";
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
